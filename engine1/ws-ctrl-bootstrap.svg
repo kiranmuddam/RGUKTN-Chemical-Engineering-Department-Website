@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2015 by original authors @ fontello.com</metadata>
+<defs>
+<font id="ws-ctrl-bootstrap" horiz-adv-x="1000" >
+<font-face font-family="ws-ctrl-bootstrap" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="glyph" unicode="&#xe800;" d="m0 350l148 149 352 351 148-148-351-352 351-352-148-148-352 352z" horiz-adv-x="648.4" />
+<glyph glyph-name="glyph-1" unicode="&#xe801;" d="m0-2l352 352-352 352 148 148 352-351 148-149-500-500z" horiz-adv-x="648.4" />
+<glyph glyph-name="glyph-2" unicode="&#xe802;" d="m0-25v750l625-375z" horiz-adv-x="625" />
+<glyph glyph-name="glyph-3" unicode="&#xe803;" d="m0-25v750h313v-750h-313z m438 0v750h312v-750h-312z" horiz-adv-x="750" />
+</font>
+</defs>
+</svg>

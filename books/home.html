@@ -1,0 +1,211 @@
+<div class="modal fade" id="modalView" tabindex="-1" role="dialog" aria-labelledby="headerLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+        <h4 class="modal-title" id="headerLabel">Gate Section</h4>
+      </div>
+      <div class="modal-body">
+
+      </div>
+      <div class="modal-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="fb3d-modal">
+  <a href="#" class="cmd-close"><span class="glyphicon glyphicon-remove"></span></a>
+  <div class="mount-container">
+
+  </div>
+</div>
+
+
+
+
+<div class="well">
+  <div class="books">
+    <div class="thumb">
+     <img id="gatebrochure" src="books/thumbs/gatebrochure.png" class="btn" alt="GATE-2018-brochure" />
+    </div>
+    <div class="thumb">
+      <img id="Gate" src="books/thumbs/labs.png" class="btn" alt="Condo Living - Party in your place" />
+    </div>
+    <div class="thumb">
+      <img id="Gate2" src="books/thumbs/gatebrochure.png" class="btn" alt="GATE-2018-brochure" />
+    </div>
+    <div class="thumb">
+      <img id="theThreeMusketeers" src="books/thumbs/labs.png" class="btn" alt="Condo Living - Party in your place" />
+    </div>
+    <div class="caption">
+      Click on books to read!!!
+    </div>
+  </div>
+</div>
+
+
+<script src="js/html2canvas.min.js"></script>
+<script src="js/three.min.js"></script>
+<script src="js/pdf.min.js"></script>
+
+<script src="js/3dflipbook.min.js"></script>
+
+<script type="text/javascript">
+
+$(function() {
+  var booksOptions = {
+    gatebrochure: {
+      pdf: 'books/gatebrochure.pdf',
+      downloadURL: 'books/gatebrochure.pdf',
+      template: {
+        html: 'templates/default-book-view.html',
+        styles: [
+          'css/font-awesome.min.css',
+          'css/short-black-book-view.css'
+        ],
+        script: 'js/default-book-view.js',
+        sounds: {
+          startFlip: 'sounds/start-flip.mp3',
+          endFlip: 'sounds/end-flip.mp3'
+        }
+      },
+      propertiesCallback: function(props) {
+        props.page.depth /= 4;
+        props.cover.padding = 0.002;
+        props.cover.binderTexture = 'books/thumbs/gatebrochure.png';
+        return props;
+      },
+      styleClb: function() {
+        $('.fb3d-modal').removeClass('dark').addClass('light');
+      },
+    
+     Gate: {
+      pdf: 'books/gatebrochure.pdf',
+      downloadURL: 'books/gatebrochure.pdf',
+      template: {
+        html: 'templates/default-book-view.html',
+        styles: [
+          'css/font-awesome.min.css',
+          'css/short-black-book-view.css'
+        ],
+        script: 'js/default-book-view.js',
+        sounds: {
+          startFlip: 'sounds/start-flip.mp3',
+          endFlip: 'sounds/end-flip.mp3'
+        }
+      },
+      propertiesCallback: function(props) {
+        props.page.depth /= 4;
+        props.cover.padding = 0.002;
+        props.cover.binderTexture = 'books/thumbs/gatebrochure.png';
+        return props;
+      },
+      styleClb: function() {
+        $('.fb3d-modal').removeClass('dark').addClass('light');
+      },
+    theThreeMusketeers: {
+      pdf: 'books/labs.pdf',
+      downloadURL: 'books/labs.pdf',
+      template: {
+        html: 'templates/default-book-view.html',
+        styles: [
+          'css/font-awesome.min.css',
+          'css/short-black-book-view.css'
+        ],
+        script: 'js/default-book-view.js',
+        sounds: {
+          startFlip: 'sounds/start-flip.mp3',
+          endFlip: 'sounds/end-flip.mp3'
+        }
+      },
+      propertiesCallback: function(props) {
+        props.page.depth /= 4;
+        props.cover.padding = 0.002;
+        props.cover.binderTexture = 'books/thumbs/labs.png';
+        return props;
+      },
+      styleClb: function() {
+        $('.fb3d-modal').removeClass('dark').addClass('light');
+      
+    
+  },
+   Gate2: {
+      pdf: 'books/labs.pdf',
+      downloadURL: 'books/labs.pdf',
+      template: {
+        html: 'templates/default-book-view.html',
+        styles: [
+          'css/font-awesome.min.css',
+          'css/short-black-book-view.css'
+        ],
+        script: 'js/default-book-view.js',
+        sounds: {
+          startFlip: 'sounds/start-flip.mp3',
+          endFlip: 'sounds/end-flip.mp3'
+        }
+      },
+      propertiesCallback: function(props) {
+        props.page.depth /= 4;
+        props.cover.padding = 0.002;
+        props.cover.binderTexture = 'books/thumbs/labs.png';
+        return props;
+      },
+      styleClb: function() {
+        $('.fb3d-modal').removeClass('dark').addClass('light');
+      }
+    }
+  };
+
+  var instance = {
+    scene: undefined,
+    options: undefined,
+    node: $('.fb3d-modal .mount-container')
+  };
+
+  var modal = $('.fb3d-modal');
+    modal.on('fb3d.modal.hide', function() {
+      instance.scene.dispose();
+    });
+    modal.on('fb3d.modal.show', function() {
+      instance.scene = instance.node.FlipBook(instance.options);
+      instance.options.styleClb();
+    });
+    $('.books').find('img').click(function(e) {
+      if(e.target.id) {
+        instance.options = booksOptions[e.target.id];
+        $('.fb3d-modal').fb3dModal('show');
+      }
+    });
+  });
+
+  $('#modalView').on('shown.bs.modal', function() {
+     $(this).find('.modal-dialog').css({
+        width: ($(this).find('.modal-body').find('*').width()+60)+'px',
+        opacity: 1
+     });
+  });
+  $('#modalView').on('hidden.bs.modal', function() {
+     $(this).find('.modal-dialog').css({
+        opacity: 0
+     });
+  });
+
+  $('.image-preview .pbtn').click(function(e) {
+    var target = e.target;
+    while(target && !$(target).hasClass('wrap')) {
+      target = target.parentNode;
+    }
+
+    var view = $('#modalView'), body = view.find('.modal-body'), footer = view.find('.modal-footer');
+    body.html($('<img style="width: '+$(target).css('width')+'; height: '+$(target).css('height')+';" src="images/'+e.target.id+'.gif">'));
+    footer.html($(e.target).attr('data'));
+    view.modal('show');
+  });
+
+  $('.img-link').click(function(e) {
+    e.preventDefault();
+    $($(e.target).attr('href')).trigger('click');
+  });
+</script>

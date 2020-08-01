@@ -1,0 +1,7 @@
+ Azure@201800 -- password
+
+ rdp file url --https://we.tl/6bmyvQZjwr
+ \
+ username : csatestserver
+
+ ssh -p 22   csatestserver@104.211.200.247
