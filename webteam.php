@@ -149,7 +149,7 @@
                 <div class="team-content">
                     <h3 class="team-title">kiranbabu M</h3>
                     <span class="post">CSE</span>
-                    <p class="description">n151061@rgukt.ac.in</p>
+                    <p class="description">mail</p>
                 </div>
                 
             </div>
@@ -164,7 +164,7 @@
                 <div class="team-content">
                     <h3 class="team-title">vijaykumar G</h3>
                     <span class="post">CSE</span>
-                    <p class="description">N151278@rguktn.ac.in</p>
+                    <p class="description">mail</p>
                 </div>
                 
     
