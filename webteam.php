@@ -147,9 +147,9 @@
                     <img src="assets/images/webteam/2.jpg">
                      </div>
                 <div class="team-content">
-                    <h3 class="team-title">kiranbabu M</h3>
+                    <h3 class="team-title">Kiran Babu Muddam</h3>
                     <span class="post">CSE</span>
-                    <p class="description">n151061@rgukt.ac.in</p>
+                    <p class="description">kiraniiitn@gmail.com</p>
                 </div>
                 
             </div>
@@ -164,7 +164,7 @@
                 <div class="team-content">
                     <h3 class="team-title">vijaykumar G</h3>
                     <span class="post">CSE</span>
-                    <p class="description">N151278@rguktn.ac.in</p>
+                    <p class="description">mail</p>
                 </div>
                 
     
