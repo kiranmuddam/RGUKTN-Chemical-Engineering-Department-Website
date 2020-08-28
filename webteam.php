@@ -147,9 +147,9 @@
                     <img src="assets/images/webteam/2.jpg">
                      </div>
                 <div class="team-content">
-                    <h3 class="team-title">kiranbabu M</h3>
+                    <h3 class="team-title">Kiran Babu Muddam</h3>
                     <span class="post">CSE</span>
-                    <p class="description">mail</p>
+                    <p class="description">kiraniiitn@gmail.com</p>
                 </div>
                 
             </div>
